@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[
+(function() {
+  if (!window.pageData)  {
+    return "";
+  } 
+  if (pageData.${1:search} && pageData.${1:search}.${2:productSearch} && pageData.${1:search}.${2:productSearch}.availableFilter) {
+    var af = pageData.${1:search}.${2:productSearch}.selectedFilter;
+    var result = [];
+    for (var i = 0; i < af.length; i++) {
+      result.push(af[i].values);
+    }
+    return result.join(",");
+  }
+})();
+]]></content>
+  <tabTrigger>ic-filter</tabTrigger>
+  <description>filter etwas</description>
+</snippet>
