@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+s.registerPreTrackCallback(function() {
+    //do sth
+});
+]]></content>
+  <tabTrigger>ic-Post</tabTrigger>
+  <description>PostCallback (before s.tl() is called)</description>
+</snippet>

@@ -1,0 +1,7 @@
+<snippet>
+  <content><![CDATA[
+window.${1:dataLayer} && ${1:dataLayer}.${2:prop1} && ${1:dataLayer}.${2:prop1}.${3:prop3} || ''
+]]></content>
+  <tabTrigger>ic-DL</tabTrigger>
+  <description>DataLayer Path</description>
+</snippet>

@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+document.body.addEventListener("${1:function}", function(e) {
+    console.log(e.detail);
+});
+]]></content>
+  <tabTrigger>ic-EventList</tabTrigger>
+  <description>Eventlistener</description>
+</snippet>
