@@ -1,7 +1,8 @@
 <snippet>
   <content><![CDATA[
+/* Version 1.0 Tini */
 s.registerPreTrackCallback(function() {
-    //do sth
+    // do sth
 });
 ]]></content>
   <tabTrigger>ic-Post</tabTrigger>

@@ -1,10 +1,11 @@
 <snippet>
   <content><![CDATA[
-
 /* Version 1.0 Patrick */
-$(window).on('${1:this}',function(e,d){console.debug(e);console.debug(d);});
+$(window).on('${1:this}', function(e, d) {
+  console.debug(e);
+  console.debug(d);
+});
 ]]></content>
-
-<tabTrigger>ic-jqDebug</tabTrigger>
- <description>jQuery Event Debugger</description>
+  <tabTrigger>ic-jqDebug</tabTrigger>
+  <description>jQuery Event Debugger</description>
 </snippet>

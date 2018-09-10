@@ -1,15 +1,14 @@
 <snippet>
   <content><![CDATA[
 /* Version 1.0 Patrick */
-(function(){
+(function() {
   var pageData = window.${1:pageData/DataLayer};
-  if(pageData.${2:ErsterArray} && Array.isArray(pageData.${2:ErsterArray})){
+  if (pageData.${2:ErsterArray} && Array.isArray(pageData.${2:ErsterArray})) {
     var category = [];
-    for(var i=0;i<pageData.${2:ErsterArray}.length;i++){
-      if(pageData.${2:ErsterArray}[i] && pageData.${2:ErsterArray}[i].${3:ZweiterArray} && Array.isArray(pageData.${2:ErsterArray}[i].${3:ZweiterArray})) {
-        for(var j=0;j<pageData.${2:ErsterArray}[i].${3:ZweiterArray}.length;j++)
-        var categories = [];
-        {
+    for (var i = 0; i < pageData.${2:ErsterArray}.length; i++) {
+      if (pageData.${2:ErsterArray}[i] && pageData.${2:ErsterArray}[i].${3:ZweiterArray} && Array.isArray(pageData.${2:ErsterArray}[i].${3:ZweiterArray})) {
+        for (var j = 0; j < pageData.${2:ErsterArray}[i].${3:ZweiterArray}.length; j++)
+          var categories = []; {
           categories.push(pageData.${2:ErsterArray}[i].${3:ZweiterArray}[j]);
         }
         category.push(categories.join({$4:JoinParameter}));

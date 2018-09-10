@@ -1,5 +1,6 @@
 <snippet>
   <content><![CDATA[
+/* Version 1.0 Tini */
 document.body.addEventListener("${1:function}", function(e) {
     console.log(e.detail);
 });

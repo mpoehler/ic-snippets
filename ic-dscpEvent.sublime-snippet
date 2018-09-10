@@ -1,5 +1,6 @@
 <snippet>
   <content><![CDATA[
+/* Version 1.0 Tini */
 document.body.dispatchEvent(new CustomEvent("${1:eventName}", {
   detail: {
     ${2:JSONObj}  

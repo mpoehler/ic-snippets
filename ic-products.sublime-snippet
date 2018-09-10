@@ -1,24 +1,26 @@
 <snippet>
   <content><![CDATA[
+/* Version 1.0 Tini */
+
 s.products = (function() {
-//if (!${1:pageData}.${2:products}) return "";
-var prodStrings = [];
-var pStr = '';
+  //if (!${1:pageData}.${2:products}) return "";
+  var prodStrings = [];
+  var pStr = '';
 
-for (var i = 0; i < ${1:pageData}.${2:products}.length; i++) {
-  if (${1:pageData}.${2:products}[i].productId) {
-    var merchVars = [];
-    ${1:pageData}.${2:products}[i].${5:prop}  && merchVars.push("${4:eVar}=" + ${1:pageData}.${2:products}[i].${5:prop}.join("/"));
-   
-    merchVars = merchVars.map(function(e) {
-      return e.replace(/,|;|\|/g, "_");
-    });
+  for (var i = 0; i < ${1:pageData}.${2:products}.length; i++) {
+    if (${1:pageData}.${2:products}[i].productId) {
+      var merchVars = [];
+      ${1:pageData}.${2:products}[i].${5:prop}  && merchVars.push("${4:eVar}=" + ${1:pageData}.${2:products}[i].${5:prop}.join("/"));
+     
+      merchVars = merchVars.map(function(e) {
+        return e.replace(/,|;|\|/g, "_");
+      });
 
-    pStr = (${1:pageData}.${2:products}[i].category && ${1:pageData}.${2:products}[i].category.toLowerCase().replace(/,|;|\|/g, "_")) + ";" + ${1:pageData}.${2:products}[i].productId + ";1;;" + (merchVars.length > 0 ? ";" + merchVars.join("|") : "");
-    prodStrings.push(pStr);
+      pStr = (${1:pageData}.${2:products}[i].category && ${1:pageData}.${2:products}[i].category.toLowerCase().replace(/,|;|\|/g, "_")) + ";" + ${1:pageData}.${2:products}[i].productId + ";1;;" + (merchVars.length > 0 ? ";" + merchVars.join("|") : "");
+      prodStrings.push(pStr);
+    }
   }
-}
-return prodStrings.join(',');
+  return prodStrings.join(',');
 })();
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
