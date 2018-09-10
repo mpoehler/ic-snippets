@@ -1,3 +1,3 @@
 #!/bin/bash
 
-tar czf ic-snippets.sublime-package *.sublime-snippet
+tar cf ic-snippets.sublime-package *.sublime-snippet
