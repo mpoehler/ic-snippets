@@ -1,0 +1,61 @@
+<snippet>
+  <content><![CDATA[
+/* Version 1.0 Tini */    
+// Generic Click Handler
+(function() {
+  //check if storage surpported!
+  if (!_satellite.getVar("storageSupported")) return;
+
+  // key im storage
+  var clickObStoreKey = "cos";
+  var ws = window.localStorage;
+  var clicked = [];  
+
+  function alreadyClicked(ob) {
+    for (var i = 0; i < clicked.length; i++) {
+      if (clicked[i].is(ob)) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  $("body").on("click", "[data-track]", function(e) {
+     // das event hatten wir schon zu fassen - bubble up
+    if (e.originalEvent.alreadyHandled) return;
+    
+    // das element wurde schon geklickt
+    if (alreadyClicked($(this))) return;
+    
+    clicked.push($(this));
+    
+    var clickArr = JSON.parse(ws.getItem(clickObStoreKey) || "[]");
+    clickArr.push({
+      "t": ($(this).attr("data-type") || "").toLowerCase(),
+      "n": ($(this).attr("data-name") || "").toLowerCase(),
+      "v": ($(this).attr("data-value") || "").toLowerCase(),
+      "r": ($(this).attr("data-ref") || "").toLowerCase(),
+      "pn": window.pageData && pageData.page && pageData.page.name || ""
+    });
+    ws.setItem(clickObStoreKey, JSON.stringify(clickArr));
+
+    // markieren, um es beim "bubble up" nicht noch einmal zu verarbeiten
+    e.originalEvent.alreadyHandled = true;
+  });
+
+  // dtm
+  setInterval(function() {
+    var clickArr = JSON.parse(ws.getItem(clickObStoreKey) || "[]");
+    var track = clickArr.shift();
+    if (track) {
+      // oder auf den data layer pushen
+      _satellite.setVar("clickData", track);
+      _satellite.track("genericClick");
+    }
+    ws.setItem(clickObStoreKey, JSON.stringify(clickArr));
+  }, 1000);
+})();
+]]></content>
+  <tabTrigger>ic-LinkTracking</tabTrigger>
+  <description>Basic idea: how to implement Link-Tracking</description>
+</snippet>

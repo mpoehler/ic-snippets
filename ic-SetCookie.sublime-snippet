@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[
+/* Version 1.0 Tini */
+function setCookie(a, b, c) {
+ var d;
+ if (c) {
+   var e = new Date;
+   e.setTime(e.getTime() + 24 * c * 60 * 60 * 1e3),
+     d = "; expires=" + e.toGMTString()
+ } else
+   d = "";
+ document.cookie = a + "=" + escape(b) + d + "; path=/"
+}
+]]></content>
+  <tabTrigger>ic-CoSet</tabTrigger>
+  <description>Set Cookie Function</description>
+</snippet>
