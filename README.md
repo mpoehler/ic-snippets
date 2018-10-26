@@ -30,7 +30,7 @@ Event-Dispatcher stub
 
 # DataLayer
 
-## ic-dl
+## [ic-dl](https://github.com/mpoehler/ic-snippets/blob/new-naming/ic-dlPath.sublime-snippet)
 Null-safe access of DataLayer properties
 
 ## ic-dlPageData
