@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+s.registerPreTrackCallback(function() {
+  ${0}    
+});
+]]></content>
+  <tabTrigger>ic-aaPre</tabTrigger>
+  <description>Adobe: PreCallback (before s.tl() is called)</description>
+  <description_readme>ToDo Text usw</description_readme>
+</snippet>

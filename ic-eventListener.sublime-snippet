@@ -1,10 +1,9 @@
 <snippet>
   <content><![CDATA[
-/* Version 1.0 Tini */
 document.body.addEventListener("${1:function}", function(e) {
     console.log(e.detail);
 });
 ]]></content>
-  <tabTrigger>ic-EventList</tabTrigger>
-  <description>Eventlistener</description>
+  <tabTrigger>ic-evListener</tabTrigger>
+  <description>Event: Listener</description>
 </snippet>

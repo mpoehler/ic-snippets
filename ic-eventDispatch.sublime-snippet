@@ -1,0 +1,12 @@
+<snippet>
+  <content><![CDATA[
+//IE hat Probleme  https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent#Polyfill
+document.body.dispatchEvent(new CustomEvent("${1:eventName}", {
+  detail: {
+    ${2:JSONObj}  
+  }
+}));
+]]></content>
+  <tabTrigger>ic-evDispatch</tabTrigger>
+  <description>Event: dispatch with details</description>
+</snippet>

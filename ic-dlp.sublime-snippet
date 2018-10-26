@@ -1,7 +1,0 @@
-<snippet>
-  <content><![CDATA[
-window.pageData && pageData.${1:form} && pageData.${1:form}.${2:subject} || ''
-]]></content>
-  <tabTrigger>ic-dlp</tabTrigger>
-  <description>DataLayer Property auslesen</description>
-</snippet>

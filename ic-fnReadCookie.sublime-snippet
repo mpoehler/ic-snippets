@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[
+ function readCookie(cookieName) {
+   for (var b = cookieName + "=", c = document.cookie.split(";"), d = 0; d < c.length; d++) {
+     for (var e = c[d];
+       " " == e.charAt(0);)
+       e = e.substring(1, e.length);
+     if (0 == e.indexOf(b))
+       return unescape(e.substring(b.length, e.length))
+   }
+   return null
+ }
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>ic-fnCoRead</tabTrigger>
+  <description>Function: Read Cookie</description>
+</snippet>

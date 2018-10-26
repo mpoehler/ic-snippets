@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[
+ function setCookie(cookieName, cookieValue, expDays) {
+   var expires;
+   if (expDays) {
+     var date = new Date;
+     date.setTime(date.getTime() + 24 * expDays * 60 * 60 * 1e3),
+       expires = "; expires=" + date.toGMTString()
+   } else
+     expires = "";
+     document.cookie = cookieName + "=" + escape(cookieValue) + expires + "; path=/"
+  }
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>ic-fnCoSet</tabTrigger>
+  <description>Function: Set Cookie</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>source.python</scope> -->
+</snippet>

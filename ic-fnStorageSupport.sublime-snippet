@@ -1,6 +1,5 @@
 <snippet>
   <content><![CDATA[
-/* Version 1.0 Tini */
 var ws = window.localStorage;
 try {
   ws.setItem("testKey", "1");
@@ -10,6 +9,7 @@ try {
   return "";
 }
 ]]></content>
-  <tabTrigger>ic-Storage</tabTrigger>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>ic-storage</tabTrigger>
   <description>Check: Storage support</description>
 </snippet>

@@ -1,0 +1,7 @@
+<snippet>
+  <content><![CDATA[
+var pageData = _satellite.getVar("pageData") || {};
+]]></content>
+  <tabTrigger>ic-dlPageData</tabTrigger>
+  <description>DataLayer: Get pageData in Satellite</description>
+</snippet>

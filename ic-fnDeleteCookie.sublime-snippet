@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+ function deleteCookie(cookieName) {
+   document.cookie = cookieName + "=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;"
+ }
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>ic-fnCoDel</tabTrigger>
+  <description>Function: Delete a cookie</description>
+</snippet>

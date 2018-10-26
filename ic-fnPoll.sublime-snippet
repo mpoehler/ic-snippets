@@ -1,0 +1,13 @@
+<snippet>
+  <content><![CDATA[
+setTimeout(function poll() {
+  if (${1:Bedingung} ) {
+        
+  } else {
+    poll();
+  }
+}, 100); // wait 100 ms
+]]></content>
+  <tabTrigger>ic-fnPoll</tabTrigger>
+  <description>Function: Poll until condition is met</description>
+</snippet>

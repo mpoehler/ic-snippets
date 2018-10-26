@@ -1,9 +1,0 @@
-<snippet>
-  <content><![CDATA[
-/* Version 1.0 Patrick */
-var pageData = _satellite.getVar('eventData');
-return pageData.${1:FirstElement} && pageData.{1:FirstElement}.{2:SecondElement} || "";
-]]></content>
-<tabTrigger>ic-dataElementLaunch</tabTrigger>
-<description>DataElement Launch über 2 Elemente</description>
-</snippet>

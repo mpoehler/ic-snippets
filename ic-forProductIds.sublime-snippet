@@ -1,0 +1,12 @@
+<snippet>
+  <content><![CDATA[
+if (Array.isArray(pageData.products) && pageData.products.length > 0) {
+  var prodArr = [];
+  for (var i = 0; i < pageData.products.length; i++) {
+    prodArr.push(pageData.products[i].id);
+  }
+}
+]]></content>
+  <tabTrigger>ic-forProd</tabTrigger>
+  <description>Array: for loop (through products)</description>
+</snippet>
