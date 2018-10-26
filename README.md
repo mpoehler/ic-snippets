@@ -6,13 +6,13 @@
 Checks if local storage is supported.
 
 ## ic-fnCoSet
-Set a Cookie with a given cookieName, cookieValue and expire in days. Example x.setCookie('key', 'value', 10);
+Set a Cookie with a given cookieName, cookieValue and expire in days. Example `x.setCookie('key', 'value', 10);`
 
 ## ic-fnCoRead
-Reads a Cookie Value, returns the value or null if there is no cookie, example: x.readCookie('key') 
+Reads a Cookie Value, returns the value or null if there is no cookie, example:`x.readCookie('key')`
 
 ## ic-fnCoDel
-Deletes a cookie with a given name, example: x.delete('key')
+Deletes a cookie with a given name, example: `x.delete('key')`
 
 ## ic-fnPoll
 Poll until condition is met
