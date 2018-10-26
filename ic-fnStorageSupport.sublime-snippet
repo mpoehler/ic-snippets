@@ -10,6 +10,6 @@ try {
 }
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-  <tabTrigger>ic-storage</tabTrigger>
+  <tabTrigger>ic-fnStorageSupport</tabTrigger>
   <description>Check: Storage support</description>
 </snippet>
